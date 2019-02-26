@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+#see skript annab välja minu nime ja õppe gruppi ja minu arvamuse tunnist.
+echo -n "Meelis "
+echo "Kaljumäe"
+echo "IS118"
+echo "Tund tundub põnev"
+echo "Loodan, et õpin palju"
+#
