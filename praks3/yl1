@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+#See skript väljastab käivitamisel kella aja ja tänase kuupäeva ning selle kuu kalendri
+#
+date "+Täna on %A, %B %d, %Y"
+date "+Kell on %H:%M"
+echo " "
+date "+See on %B %Y kalender"
+cal | sed '1d'
