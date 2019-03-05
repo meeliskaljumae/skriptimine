@@ -1,0 +1,8 @@
+#!/bin/bash
+#
+#See skript väljastab arvuti nime ja kui kaua see on käinud
+#
+echo -n $(hostname) && echo -n " at " && echo -n $(uptime) | echo -n  $(awk '{ print $1 }') 
+echo -n " "
+echo -n $(uptime -p) 
+echo " "
