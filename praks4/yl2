@@ -1,0 +1,22 @@
+#!/bin/bash
+#
+#See skript laseb kasutjal arvutada küpsise pakkide arvu küpsise tordi jaoks
+#
+echo "Sisesta kandiku laius cm-tes :" #küsib kasutajalt infot
+read kandikulaius #loeb kasutaja vastust ja lisab sellel väärtuse
+echo "Sisesta kandiku pikkus cm-tes :"
+read kandikupikkus
+echo "Sisesta küpsise laius cm-tes :"
+read kupalaius
+echo "Sisesta küpsise pikkus cm-tes :"
+read kupapikkus
+echo "Sisesta soovitud küpsise kihtide arv :"
+read kihtidearv
+echo "sisesta mitu küpsist on ühes pakkis :"
+read pakkid
+kp=`expr $kandikulaius \* $kandikupikkus` #arvutab kandiku pindala ja lisab vastusele väärtuse
+kpp=`expr $kupalaius \* $kupapikkus` #arvutab küpise pindala ja lisab vastusele väärtuse
+ks=`expr $kp / $kpp` #arvutab 1 kihi jaoks valjalike küpsiste arvu
+kk=`expr $ks \* $kihtidearv` #arvutab  kui palju küpiseid on vaja kogu tordi jaoks
+kupsistesumma=`expr $kk / $pakkid` #arvutab kui mitu küpsise pakki on vaja
+echo "Teil on vaja" $kupsistesumma "pakki küpiseid" #väljastab teksti ja vajaminevate  küpsise pakkide arvu
