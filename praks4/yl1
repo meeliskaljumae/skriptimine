@@ -1,0 +1,7 @@
+#!/bin/bash
+#
+#Skript mis küsib käivitamisel kasutaja nime ja siis tervitab teda
+#
+echo -n "Mis on teie eesnimi ja perenimi: " #Küsib kasutajalt nime
+read eesnimi perenimi #Loeb mida kasutaja on kirjutanud ja lisab neile väärtused "eesnimi" ja "perenimi"
+echo "Tere tulemast, $eesnimi $perenimi" #Prindib Tere Tulemast ja lisab eelmise käsuga loodud väärtused.
