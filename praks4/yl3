@@ -1,0 +1,14 @@
+#!/bin/bash
+#
+#See skript küsib kasutajalt mitu reisijat on ja mitu kohta on bussis ja arvutab mitu täis bussi on vaja ja mitu inimest ei mahu
+#
+echo "Sisesta reisijate arv :" #küsib kasutajalt reisijate arvu
+read r #loeb kasutaja vastust ja määrab sellel väärtuse
+echo "Sisesta kohtade arv bussis :" #küsib kasutajalt bussi kohtade arvu
+read k #loeb kasutaja vastust ja määrab sellel väärtuse
+bussid=`expr $r / $k` #arvutab vaja minevate busside arvu
+maha=`expr $r % $k` #arvutab mitu inimest ei mahu peale
+echo -n "Praeguse reisijate arvuga saame "$bussid" täis bussi"
+echo -n " ja peale ei mahu "$maha" reisijat"
+echo " "
+#väljastab vastuse
