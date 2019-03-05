@@ -1,0 +1,5 @@
+#!/bin/bash
+#
+#See skript otsib var kataloogist kõik .log lõpuga failid ja sorteerib need nende ridade arvu järgi
+#
+find /var -type f -name "*.log" 2>/dev/null -exec wc -l {} \; | sort -n -r
