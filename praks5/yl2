@@ -1,0 +1,20 @@
+#!/bin/bash
+#
+#See skript arvutab Heroni valemit
+#
+echo "Sisesta A külje väärtus"
+read a
+echo "Sisesta B külje väärtus"
+read b
+echo "Sisesta C külje väärtus"
+read c
+#küsib kasutajalt väärtusi ja annab neile väärtused mida saab skriptis kasutada
+l=`echo "scale=2;$a+$b+$c" | bc`
+#echo $l
+p=`echo "scale=2;$l/2" | bc`
+#echo $p
+s=`echo "scale=2;sqrt($p*($p-$a)*($p-$b)*($p-$c))" | bc`
+#teeb arvutused ja väljundab arvutusede vastused skripti töö kontrollimiseks
+echo "Pindala="$s
+#annab kasutajale vastuse
+#lõpp
