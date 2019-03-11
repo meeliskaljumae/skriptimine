@@ -1,0 +1,15 @@
+#!/bin/bash
+#
+#See skript arutab täisnurkse kolmnurga hüpotenuusi
+#
+echo "Sisesta külje A väärtus"
+read a
+echo "Sisesta külje B väärtus"
+read b
+#küsib kasutajalt väärtusi ja annab neile väärtuse mida skriptis kasutada saab
+d=`echo "scale=2;$a^2+$b^2" | bc`
+c=`echo "scale=2;sqrt($d)" | bc`
+#teeb arvutused
+echo "C="$c
+#annab kasutajale vastuse
+#lõpp
