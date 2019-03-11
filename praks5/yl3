@@ -1,0 +1,17 @@
+#!/bin/bash
+#
+#arvutab mis päeval tagasi jõuad
+#
+echo "Pühapäev-0 Esmaspäev-1 Teisipäev-2 Kolmapäev-3 Neljapäev-4 Reede-5 Lauppäev-6"
+#näitab kasutajale valikud
+echo "Sisesta päeva number kuna ära sõidad:"
+read soidupaev
+echo "sisesta ööpäevade arv:"
+read reisipikkus
+#küsib kasutajalt ära sõidu päeva ja reisis pikkuse ja annab kasutaja vastustele väärtuse mida saab kasutada skriptis
+vp=$(($reisipikkus % 7))
+tagasi=$(($soidupaev + $vp))
+#teeb arvutused
+echo "Tagasi jõuad päeval number: "$tagasi
+#väljastab vastuse
+#lõpp
