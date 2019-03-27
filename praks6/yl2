@@ -1,0 +1,22 @@
+#!/bin/bash
+#
+#See skript arvutab kui palju busse läheb vaja reisijate transportimiseks
+#
+echo "Sisesta reisijate arv"
+read reisijad
+echo "Sisesta kohtade arv bussis"
+read kohad
+#Küsib kasutajalt andmed
+buss=$(($reisijad / $kohad))
+
+jaak=$(($reisijad % $kohad))
+#arvutab vaja minevate kohtade arvu ja jäägi
+
+if test $jaak -gt 0
+then
+	buss=$(($buss + 1))
+fi
+#lisab 1 bussi tulemusele juurde kui on jääk
+echo "Vaja on $buss bussi"
+#annab vastuse
+#lõpp
