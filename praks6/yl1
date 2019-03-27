@@ -1,0 +1,17 @@
+#!/bin/bash
+#
+#see skript kontrollib kas arv on paaris või paaritu
+#
+echo "Sisesta täisarv!"
+read arv
+#Küsib kasutajalt arvu
+tehe=$(( $arv % 2 ))
+#kontrollib kas arvul jääb peale 2 jagamist jääk.
+if [ $tehe -eq 0 ]
+then
+	echo "$arv on paaris"
+else
+	echo "$arv on paaritu"
+fi
+#väljundab vastuse vastavalt jäägile.
+#lõpp
