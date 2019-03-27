@@ -1,0 +1,20 @@
+#!/bin/bash
+#
+#see skript kontrollib kas arv on paaris või paaritu
+#
+#
+if [ -z "$1" ]; then
+	echo "Palun sisesta käivitamis käsu järele täisarv."
+#Kontrollib kas kasutaja on midagi sisestanud ja annab errori kui ei ole
+else
+	tehe=$(( $1 % 2 ))
+if [ $tehe -eq 0 ]; then
+#kontrollib arvu jääki peale kahega jagamist
+
+	echo "$1 on paaris" 
+else
+	echo "$1 on paaritu"
+fi
+fi
+#väljundab vastuse vastavalt jäägile.
+#lõpp
