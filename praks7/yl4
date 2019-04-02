@@ -1,0 +1,17 @@
+#!/bin/bash
+#
+#See skript tervitab kasutajat vastavalt kellaajale
+#
+aeg=`date "+ %H"`
+#Annab praeguse kella aja ainult tunnina
+if [ $aeg -ge 6 -a $aeg -le 12 ]; then
+	echo "Tere hommikust, $(whoami)"
+elif [ $aeg -gt 12 -a $aeg -le 18 ]; then
+	echo "Tere päevast, $(whoami)"
+elif [ $aeg -gt 18 -a $aeg -le 22 ]; then
+	echo "Tere õhtust, $(whoami)"
+elif [ $aeg -ge 22 -a $aeg -lt 24 ] || [ $aeg -ge 0 -a $aeg -lt 6 ]; then
+	echo "Head ööd, $(whoami)"
+#leiab sisendile vastava tervituse ja lisab selle hetke kasutaja nime
+fi
+#Skripti lõpp
