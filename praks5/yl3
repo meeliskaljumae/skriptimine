@@ -2,7 +2,7 @@
 #
 #arvutab mis päeval tagasi jõuad
 #
-echo "Pühapäev-0 Esmaspäev-1 Teisipäev-2 Kolmapäev-3 Neljapäev-4 Reede-5 Lauppäev-6"
+echo "Pühapäev-0 Esmaspäev-1 Teisipäev-2 Kolmapäev-3 Neljapäev-4 Reede-5 Laupäev-6"
 #näitab kasutajale valikud
 echo "Sisesta päeva number kuna ära sõidad:"
 read soidupaev
