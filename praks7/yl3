@@ -1,0 +1,24 @@
+#!/bin/bash
+#
+#See skript tervitab kasutajat vastavalt sisestatud kellaajale
+#
+echo "Sisesta aja väärtus"
+read aeg
+#Küsib kasutajalt sisendit
+if [[ "$aeg" =~ [^0-9]+ ]] ; then
+	echo "sisesta ainult number"
+#kontrollib kas kasutaja sisestas ainult numbri
+elif [ $aeg -ge 6 -a $aeg -le 12 ]; then
+	echo "Tere hommikust"
+elif [ $aeg -gt 12 -a $aeg -le 18 ]; then
+	echo "Tere päevast"
+elif [ $aeg -gt 18 -a $aeg -le 22 ]; then
+	echo "Tere õhtust"
+elif [ $aeg -ge 22 -a $aeg -lt 24 ] || [ $aeg -ge 0 -a $aeg -lt 6 ]; then
+	echo "Head ööd"
+#leiab kasutaja sisendile vastava tervituse
+else
+	echo "Palun sisesta number vahemikus 1-24"
+#annab errori sõnumi kui arv ei ole antud vahemikus
+fi
+#Skripti lõpp
