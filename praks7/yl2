@@ -1,0 +1,29 @@
+#!/bin/bash
+#
+#See skript küsib kasutajalt kuu numbrit ja väljastab vastavalt sellele aasta aja
+#
+echo "Sisesta kuu number"
+read kuu
+#Küsib kasutajalt kuu numbrit
+if  [[ "$kuu" =~ [^0-9]+ ]] ; then
+	echo "Sisesta ainult kuu number. Näiteks Jaanuar=1"
+#Kontrollib kas kasutaja sisestas ainult numbri
+elif test $kuu -gt 0 -a $kuu -le 2 -o $kuu -eq 12
+then 
+	echo "Praegu on talv"
+elif test $kuu -ge 3 -a $kuu -le 5
+then
+	echo "Praegu on kevad"
+elif test $kuu -ge 6 -a $kuu -le 8
+then
+	echo "Praegu on suvi"
+elif test $kuu -ge 9 -a $kuu -le 11
+then 
+	echo "Praegu on sügis"
+#Võrdleb kasutaja sisestatud arvu antud väärtustega ja annab kasutajale vastuse
+elif test $kuu -eq 0 -o $kuu -gt 12
+then
+	echo "Palun sisesta number, mis jääb kuude vahemiku 1-12"
+#kontrollib kas kasutaja sisestatud arv jääb kuude vahemiku
+fi
+#Skripti lõpp
