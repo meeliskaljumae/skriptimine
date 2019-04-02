@@ -4,7 +4,7 @@
 #
 #
 if [ -z "$1" ]; then
-	echo "Palun sisesta käivitamis käsu järele täisarv."
+	echo "Sisesta oma arv niimoodi: $0 arv"
 #Kontrollib kas kasutaja on midagi sisestanud ja annab errori kui ei ole
 else
 	tehe=$(( $1 % 2 ))
