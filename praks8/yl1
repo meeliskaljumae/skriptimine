@@ -1,0 +1,18 @@
+#!/bin/bash
+#
+#See skript liidab kokku kõik 1-10 vahemikus olevad paarisarvud
+#
+summa=0
+for (( arv=1; arv<11; arv++ ))
+#lisab alg arvule 1 arvu juurde ja lõpetab kui see arv jõuab 10
+do
+	jaak=$(($arv % 2))
+	if [ $jaak -eq 0 ]; then
+		summa=$(($summa + $arv))
+		echo $summa
+#Kontrollib kas arv on paarisarv ja liidab arvu kui see on
+fi
+done
+echo "Paarisarvude summa vahemikus 1-10 on: $summa"
+#Annab kasutajale vastuse
+#skripti lõpp
