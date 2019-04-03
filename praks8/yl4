@@ -1,0 +1,30 @@
+#!/bin/bash
+#
+#See skript kontrollib kas kasutaja sisestatud arv on algarv
+#
+echo "Sisesta arv"
+read arv
+#Küsib kasutajalt arvu
+if [ $arv -eq 0 -o $arv -eq 1 ]; then
+	echo "$arv ei ole algarv."
+#Kontrollib, et arv ei oleks 0 ega 1
+else
+	jagaja=2
+	jaak=$(($arv % $jagaja))
+	while [ $jaak -ne 0 ]
+#jagab kasutaja sisestatud arvu 2, kontrollib jääki ja teeb seda kuni jääk on võrdne nulliga
+	do
+		jagaja=$(($jagaja + 1))
+		jaak=$(($arv % $jagaja))
+#liidab jagajale 1 juurde ja jagab kasutaja sisestatud arvu sellega
+
+	done
+	if [ $arv -eq  $jagaja ]; then
+#lõpetab kui arv ja jagaja on võrdsed
+echo "$arv on algarv"
+	else
+echo "$arv ei ole algarv"
+#Annab vastava vastuse
+fi
+fi
+#skripti lõpp
