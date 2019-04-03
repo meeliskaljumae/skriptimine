@@ -1,0 +1,18 @@
+#!/bin/bash
+#
+#See skript arvutab sisestatud arvude summa
+#
+echo "Sisesta suvaline number"
+read arv
+#Küsib kasutajalt arvu
+summa=0
+while [ $arv -ne 0 ]
+#teeb seda skripti niikaua, kuni arv ei ole võrdne nulliga
+do
+	jaak=$(($arv % 10))
+	summa=$(($summa + $jaak))
+	arv=$(($arv / 10))
+#kasutab jääki ja jagamist, et saada kasutaja sisestatud arvust üksik arvud, ja liidab need arvud kokku, et saada summa
+done
+echo "Nende arvude summa on:$summa"
+#skripti lõpp
