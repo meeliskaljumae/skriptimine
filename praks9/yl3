@@ -1,0 +1,25 @@
+#!/bin/bash
+#
+#See skript väljastab tärne
+#
+echo "Sisesta ridade arv"
+read rida
+echo "sisesta veergude arv"
+read veerg
+#Küsib kasutajalt arve
+for (( i = 1 ; i <=$rida; i++ ))
+do
+	for (( j = 1 ;j <=$veerg; j++ ))
+	do
+if [ $i -eq 1 -o $i -eq $rida ]; then
+		echo -n "*"
+else
+if [ $j -eq 1 -o $j -eq $veerg  ]; then
+echo -n "*"
+else
+echo -n " "
+fi
+fi
+	done
+echo ""
+done
