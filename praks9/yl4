@@ -1,0 +1,22 @@
+#!/bin/bash
+#
+#See skript väljastab tärne
+#
+echo "Sisesta ridade arv"
+read rida
+#küsib kasutajalt ridade arvu
+for (( i = 1 ; i <=$rida; i++ ))
+do
+	for (( j = 1 ;j <=$rida; j++ ))
+	do
+#lisab 1 kuni arvud on võrdsed kasutaja omadega, et saada read ja veerud
+if [ $i -ge $j ]; then
+		echo -n "*"
+else
+echo -n " "
+#prindib * ainult kui ridade arv on suurem või võrdne veergude arvuga
+fi
+	done
+echo ""
+done
+#skripti lõpp
