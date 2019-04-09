@@ -1,0 +1,14 @@
+#!/bin/bash
+#
+#See skript väljastab tärne
+#
+for (( i = 1 ; i <=5; i++ ))
+do
+	for (( j = 1 ;j <=5; j++ ))
+	do
+#Loob 5 rida ja veergu
+		echo -n "*"
+#väljastab tärnid
+	done
+echo ""
+done
