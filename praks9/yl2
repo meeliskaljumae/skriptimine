@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+#See skript väljastab tärne
+#
+echo "Sisesta ridade arv"
+read rida
+echo "sisesta veergude arv"
+read veerg
+#Küsib kasutajalt arve
+for (( i = 1 ; i <=$rida; i++ ))
+do
+	for (( j = 1 ;j <=$veerg; j++ ))
+	do
+#loob ridu ja veerge vastavalt kasutaja arvule
+		echo -n "*"
+#väljastab tärnid
+	done
+echo ""
+done
