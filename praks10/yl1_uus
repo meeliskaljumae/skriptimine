@@ -1,0 +1,30 @@
+#!/bin/bash
+while :
+do
+echo "Skripti peatamiseks vajuta x, jätkamiseks vajuta enter klahvi"
+read lopp
+if [ $lopp == "x" -o $lopp == "X" ]; then
+exit
+	else
+echo -n "Sisesta kasutaja nimi: "
+read kasutaja
+echo -n "Sisesta parool: "
+read pass
+echo -n "Sisesta Kasutaja grupp Opetaja Opilane: "
+read grupp
+egrep "^$kasutaja" /etc/passwd >/dev/null
+if [ $? -eq 0 ]; then
+	echo "$kasutaja olemas"
+exit
+	else
+		if  grep -q $grupp /etc/group ; then
+		useradd -g $grupp -d /home/$kasutaja -s/bin/bash -m $kasutaja
+		echo "$kasutaja:$pass" | chpasswd
+		echo -e "Kasutajanimi on :$kasutaja Parool on :$pass"
+		echo "Kasutaja lisati $grupp gruppi"
+	else
+		echo "Gruppi nimi pole õeti kirjutatud"
+fi
+fi
+fi
+done
